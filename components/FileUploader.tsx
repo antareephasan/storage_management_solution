@@ -54,7 +54,7 @@ const FileUploader = ({ ownerId, accountId, className }: FileUploaderProps) => {
         // WAIT FOR ALL THE FILES TO BE UPLOADED
         await Promise.all(uploadPromises)
 
-    }, [ownerId, accountId, path])
+    }, [ownerId, accountId, path, toast])
     const { getRootProps, getInputProps } = useDropzone({ onDrop })
 
     const handleRemoveFile = (e: React.MouseEvent<HTMLImageElement, MouseEvent>, fileName: string) => {

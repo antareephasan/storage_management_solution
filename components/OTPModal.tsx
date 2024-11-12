@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useState } from "react";
 import {
     AlertDialog,
     AlertDialogAction,
@@ -16,7 +17,6 @@ import {
     InputOTPSlot,
 } from "@/components/ui/input-otp"
 import Image from "next/image";
-import { useState } from "react";
 import { Button } from "./ui/button";
 import { sendEmailOTP, verifySecret } from "@/lib/actions/user.actions";
 import { useRouter } from "next/navigation";

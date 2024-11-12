@@ -1,3 +1,4 @@
+import React from "react";
 import { Models } from "node-appwrite";
 import Thumbnail from "./Thumbnail";
 import FormattedDateTime from "./FormattedDateTime";

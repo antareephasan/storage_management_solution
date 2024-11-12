@@ -26,9 +26,7 @@ import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { deleteFile, renameFile, updateFileUsers } from "@/lib/actions/file.actions";
 import { usePathname } from "next/navigation";
-import { FileDetails } from "./ActionsModalContent";
-import { ShareInput } from "./ActionsModalContent";
-
+import { FileDetails, ShareInput } from "./ActionsModalContent";
 
 const ActionDropdown = ({ file }: { file: Models.Document }) => {
 
@@ -59,7 +57,7 @@ const ActionDropdown = ({ file }: { file: Models.Document }) => {
             rename: () => renameFile({
                 fileId: file.$id,
                 extension: file.extension,
-                name: name,
+                name,
                 path,
             }),
             share: () => updateFileUsers({
